@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operations and Revenue Analytics</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="certificate">
+        <h1>Operations and Revenue Analytics</h1>
+        <iframe src="certificate/Certificate1.pdf" class="pdf-viewer" 
+                title="Certificate A PDF Viewer"></iframe>
+        <button class="btn btn-primary" onclick="downloadCertificateB()">
+            Download Certificate B
+        </button>
+    </div>
+
+    <script>
+        function downloadCertificateB() {
+            const link = document.createElement('a');
+            link.href = 'certificate/Certificate2.pdf';
+            link.download = 'CertificateB.pdf';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    </script>
+</body>
+</html>
